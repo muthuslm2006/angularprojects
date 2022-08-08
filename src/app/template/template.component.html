@@ -1,0 +1,51 @@
+
+<p>
+    Happy
+</p>
+<div *ngIf="users">
+users are pre;
+    <div *ngFor="let user of users">
+       <!-- {{user.name}},
+        {{user.age}},
+        {{user.gendar}} -->
+        <div [ngSwitch]="user.gendar">
+            <div class="male" *ngSwitchCase="'m'">
+                {{user.name}}
+            </div>
+            <div class="female" *ngSwitchCase="'f'">
+                {{user.name}}
+            </div>
+            <div class="" *ngSwitchDefault="''">
+                {{user.name}}
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<hr>
+<ng-template [ngIf]="users">
+    NG Template
+        <div *ngFor="let user of users">
+           <!-- {{user.name}},
+            {{user.age}},
+            {{user.gendar}} -->
+            <div [ngSwitch]="user.gendar">
+                <div class="male" *ngSwitchCase="'m'">
+                    {{user.name}}
+                </div>
+                <div class="female" *ngSwitchCase="'f'">
+                    {{user.name}}
+                </div>
+                <div class="" *ngSwitchDefault>
+                    {{user.name}}
+                </div>
+            </div>
+        </div>
+</ng-template>
+
+
+<input/>
+
+<button (click)="incrementcount()">Increment</button>
+
+{{dataServeice.count}}
