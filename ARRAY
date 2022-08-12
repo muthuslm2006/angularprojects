@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Array Function</h3>
+    <button onclick="fun()">Find</button>
+    <script>
+        function fun()
+            {
+                var stdname=["muthu","Tamil","Uma","Arjun","Baskar"];
+                const  sal=[23, 44, 55, 6, 455, 788, 4, 655, 175, 99];
+                
+                
+                var re=Array.isArray(sal);
+                console.log("This array is "+re);
+
+
+                var arraylength=sal.length;
+                console.log("array lenght "+arraylength);
+                
+                console.log("Orginal Array "+sal);
+                sal.sort(function(a ,b)
+                {
+                    return b-a;
+                });
+                console.log("Desiging "+sal);
+                
+                sal.sort(function(a ,b)
+                {
+                    return a-b;
+                });
+                console.log("assigning "+sal);
+                
+                var rever=sal.reverse();
+                console.log("Reverse Array "+rever);
+
+                
+                
+                var srt=sal.sort();
+                console.log("First Letter Sort Array "+srt);
+                //console.log(sal);
+
+                console.log("Orginal Name: "+stdname);
+                var namesrt=stdname.sort();
+                
+                console.log("Name Sort Array "+namesrt);
+
+
+                var max=Math.max.apply(null,sal);
+                console.log("Biggest Number"+max);
+
+                var min=Math.min.apply(null,sal);
+                console.log("Sumal Number"+min);
+
+
+            }
+    </script> 
+</body>
+</html>
