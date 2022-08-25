@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img</title>
+    <style>
+        /* next funD  */
+        .sli
+        {
+            margin: 50px auto;
+            width: 50%;
+        }
+        .img-box img
+        {
+            width: 30%;
+        }
+        .btn
+            {
+                border: none;
+                outline: none;
+                background: gray;
+                padding: 10px 30px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+                margin: 10px auto;
+
+            }
+            .btn:hover
+            {
+                background: black;
+            }
+                </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="img-box">
+            <img id="imgggg" src="images/b.jpg" class="slider-img">
+        </div>
+        <!-- next prv  -->
+        
+<button class="btn" onclick="setTimeout (prv, 1000)">Prv</button>
+<button class="btn" onclick="setTimeout (next,1000)">Next</button>
+
+
+<button class="btn" onclick="showorhide()">showorhide</button>
+    </div>
+    
+</body>
+<script>
+    var slider_imgg = document.querySelector('.slider-img');
+    var imges=['b.jpg','c.jpg','d.jpg','e.jpg','f.jpg'];
+    var i=0;
+
+    function prv()
+    {
+        if(i<=0) i = imges.length;
+        i--;
+        return setimg();
+    }
+    function next()
+    {
+        if(i >= imges.length-1)i=-1;
+        i++;
+        return setimg();
+
+    }
+    function setimg()
+    {
+        return slider_imgg.setAttribute('src', 'images/'+ imges[i]);
+    }
+
+var a;
+function showorhide()
+{
+    if(a==1)
+    {
+document.getElementById("imgggg").style.display="inline";
+return a=0;
+    }
+    else
+    {
+        document.getElementById("imgggg").style.display="none";
+        return a=1;
+    }
+}
+
+
+</script>
+</html>
+
+    
